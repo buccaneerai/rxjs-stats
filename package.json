@@ -1,0 +1,62 @@
+{
+  "name": "@buccaneer/rxjs-stats",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "description": "The statistical toolkit for RxJS",
+  "repository": "https://github.com/buccaneerai/rxjs-stats.git",
+  "author": "Buccaneer LLC <opensource@buccaneer.ai>",
+  "license": "MIT",
+  "private": false,
+  "bugs": {
+    "url": "https://github.com/buccaneerai/rxjs-stats/issues"
+  },
+  "keywords": [
+    "statistics",
+    "math",
+    "data science",
+    "stats",
+    "rxjs",
+    "observables",
+    "stream",
+    "streaming",
+    "realtime",
+    "real-time",
+    "reactive"
+  ],
+  "files": [
+    "build/*"
+  ],
+  "engines": {
+    "node": ">=10.8.0",
+    "yarn": ">=1.9.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "rxjs": "^6.5.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "babel-eslint": "^10.0.3",
+    "chai": "^4.2.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "mocha": "^6.2.1",
+    "optimist": "^0.6.1",
+    "prompt": "^1.0.0",
+    "rxjs-marbles": "^5.0.3",
+    "sinon": "^7.5.0"
+  },
+  "scripts": {
+    "build": "rm -rf ./build/* && babel ./src -d ./build --ignore test.js",
+    "lint": "eslint -c .eslintrc ./src",
+    "test": "mocha --require @babel/register --require @babel/polyfill ./src/*.test.js ./src/**/*.test.js --exit --require source-map-support"
+  }
+}
