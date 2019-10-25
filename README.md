@@ -1,5 +1,8 @@
 [![CircleCI](https://circleci.com/gh/buccaneerai/rxjs-stats/tree/master.svg?style=shield)](https://circleci.com/gh/buccaneerai/rxjs-stats/tree/master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+<a href="https://www.npmjs.com/package/@buccaneer/rxjs-stats">
+  <img src="https://img.shields.io/npm/v/@buccaneer/rxjs-stats.svg" alt="Version">
+</a>
 
 # This package is a work in progress.  Don't use this yet!
 
