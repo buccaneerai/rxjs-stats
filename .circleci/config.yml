@@ -1,0 +1,39 @@
+build_defaults: &build_defaults
+  docker:
+    - image: circleci/node:10-stretch
+
+version: 2
+jobs:
+  build:
+    <<: *build_defaults
+    steps:
+      - checkout
+      - run:
+          name: Add node_modules/bin to PATH
+          command: echo 'export PATH=~/project/node_modules/.bin:$PATH' >> $BASH_ENV
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install dependencies
+          command: yarn
+      - save_cache:
+          paths:
+            ~/.cache/yarn
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Build
+          command: yarn build
+      - run:
+          name: Lint
+          command: yarn run lint
+      - run:
+          name: Test
+          command: yarn test
+      - run:
+          name: Security check for npm packages
+          command: yarn audit
+workflows:
+  version: 2
+  build_test_deploy:
+      jobs:
+        - build
