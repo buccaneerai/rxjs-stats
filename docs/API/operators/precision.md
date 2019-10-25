@@ -1,5 +1,5 @@
 # Description
-Given an Observable of ground-truth labels and predictions, the precision operator returns the [precision](https://en.wikipedia.org/wiki/Precision_and_recall) the predicted labels.
+Given an Observable of ground-truth labels and predictions, the precision operator returns the [precision](https://en.wikipedia.org/wiki/Precision_and_recall).
 
 # Examples
 ```
