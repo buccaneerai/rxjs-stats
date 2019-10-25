@@ -1,6 +1,6 @@
 import { map } from 'rxjs/operators';
 
-function round(number, method, precision) {
+function round(number, precision, method) {
   let _number = number;
   if (!Number.isInteger(precision)) {
     throw new Error('Expected precision to be an integer');
