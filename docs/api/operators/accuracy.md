@@ -1,8 +1,12 @@
-# Description
-Given an `Observable` of ground-truth labels and predictions, the accuracy operator returns the accuracy (trueness) of the predicted labels.
+# accuracy
 
-# Examples
-```
+## Description
+
+Given an `Observable` of ground-truth labels and predictions, the accuracy operator returns the accuracy \(trueness\) of the predicted labels.
+
+## Examples
+
+```text
 import { from } from 'rxjs';
 import { accuracy } from '@buccaneer/rxjs-stats';
 
@@ -36,3 +40,4 @@ accuracy$.subscribe(console.log);
 // 0.6666666667
 // 0.6
 ```
+

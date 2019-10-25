@@ -1,8 +1,12 @@
-# Description
+# sum
+
+## Description
+
 Calculates the sum of all items in an `Observable`.
 
-# Examples
-```
+## Examples
+
+```text
 import { from } from 'rxjs';
 import { sum } from '@buccaneer/rxjs-stats';
 
@@ -18,3 +22,4 @@ num$.subscribe(console.log);
 // 10
 // 15
 ```
+
