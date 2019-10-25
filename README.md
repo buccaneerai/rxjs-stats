@@ -6,7 +6,7 @@
 
 ## Purpose
 
-Why does this package exist? The engineering team at [Buccaneer](https://www.buccaneer.ai) wanted a set of of RxJS 6 operators to perform common calculations used in statistics, data science, math, analytics and machine learning. These tools did not exist so they had to be built from scratch. `rxjs-stats` was born and released as an opensource package so the entire Javascript community could use it!
+This package provides a set of of [RxJS 6](http://rxjs-dev.firebaseapp.com/) operators to perform common calculations used in statistics, data science, math, analytics and machine learning. The implementations are written in pure JavaScript and are lightweight, reactive, performant, declarative and isomorphic.
 
 ## Documentation
 - [Documentation](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats)
