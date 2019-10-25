@@ -2,7 +2,7 @@
 Given an Observable of ground-truth labels and predictions, the recall operator returns the [recall](https://en.wikipedia.org/wiki/Precision_and_recall).
 
 # Examples
-```
+```js
 import { from } from 'rxjs';
 import { recall } from '@buccaneer/rxjs-stats';
 

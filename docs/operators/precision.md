@@ -2,7 +2,7 @@
 Given an Observable of ground-truth labels and predictions, the precision operator returns the [precision](https://en.wikipedia.org/wiki/Precision_and_recall).
 
 # Examples
-```
+```js
 import { from } from 'rxjs';
 import { precision } from '@buccaneer/rxjs-stats';
 
