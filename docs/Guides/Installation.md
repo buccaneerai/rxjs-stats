@@ -1,14 +1,18 @@
 # Installation
 
+With `npm`:
 ```
 npm i @buccaneer/rxjs-stats --save
-# or
+```
+
+Or with `yarn`:
+```
 yarn install @buccaneer/rxjs-stats
 ```
 
 |-Platform-|-Support-|
 |----------|---------|
-|node.js (>10.0)|--✅--|
-|Browsers|--✅--|
-|React Native|--✅--|
-|Electron|--✅--|
+|node.js (>10.0)|✅|
+|Browsers|✅|
+|React Native|✅|
+|Electron|✅|
