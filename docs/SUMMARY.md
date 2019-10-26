@@ -13,3 +13,4 @@
   * [roundTo](operators/roundTo.md)
   * [sum](operators/sum.md)
   * [throwUnlessNumber](operators/throwUnlessNumber.md)
+  * [variance](operators/variance.md)
