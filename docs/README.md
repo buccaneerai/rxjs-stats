@@ -1,4 +1,4 @@
-# What is rxjs-stats
+# What is rxjs-stats for?
 
 ## Purpose
 
