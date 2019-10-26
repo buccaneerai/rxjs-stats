@@ -1,3 +1,1 @@
-import * as operators from './operators/index';
-
-export default operators;
+export * from './operators/index';

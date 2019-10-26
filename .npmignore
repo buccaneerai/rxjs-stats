@@ -4,6 +4,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 *-audit.json
+*.test.js
 
 # Coverage directory used by tools like istanbul
 coverage
