@@ -1,14 +1,9 @@
+# <img src="https://github.com/buccaneerai/rxjs-stats/blob/v0.4.0/docs/rxjs-stats.png" />
 [![CircleCI](https://circleci.com/gh/buccaneerai/rxjs-stats/tree/master.svg?style=shield)](https://circleci.com/gh/buccaneerai/rxjs-stats/tree/master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 <a href="https://www.npmjs.com/package/@buccaneer/rxjs-stats">
   <img src="https://img.shields.io/npm/v/@buccaneer/rxjs-stats.svg" alt="Version">
 </a>
-
-<p>
-  <img src="https://github.com/buccaneerai/rxjs-stats/blob/dev/docs/rxjs-stats.png" />
-</p>
-
-## Overview
 
 `rxjs-stats` is a set of of [RxJS 6](http://rxjs-dev.firebaseapp.com/) operators to perform common calculations used in statistics, data munging, data science, math, analytics and machine learning. 
 
@@ -17,10 +12,23 @@ It helps you write reactive applications that use expressive functional programm
 It is part of the [Swashbuckler](https://swashbuckler.ai) project, which is a larger effort to create second-to-none data science tools for software makers who love JavaScript.
 
 ## Documentation
-- [Quick Start](https://app.gitbook.com/@brianbuccaneer/s/quick-start)
+- **New Users, Start Here** :arrow_right: [Quick Start](https://app.gitbook.com/@brianbuccaneer/s/quick-start)
 - [Documentation](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats)
 - [Guides](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides)
 - [Full List of operators](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/operators)
+
+## Community
+If you share the goal of creating amazing data science tools for the Javascript community, then here are some ways to help:
+- Star us on Github ✨ :octocat: ✨
+- [Become a contributor (even small contributions matter!)]() 👑
+- [Add your organization's logo to the list of users]()
+- [Follow the Swashbuckler Blog](https://medium.com/buccaneer) ✒️
+- [Report & Debug Issues]() 🌊
+- [Join Community Discussions]() 🐬
+- [Become a Sponser]() (or encourage your employer to do so)  ⚓️
+- [Give Feedback]()
+
+## Used by
 
 ## License
 MIT
