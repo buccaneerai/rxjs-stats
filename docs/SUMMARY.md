@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Overview](README.md)
+* [Overview](../README.md)
 * [Guides](guides/README.md)
   * [Installation](Guides/Installation.md)  
   * [Quick Start](Guides/GettingStarted.md)

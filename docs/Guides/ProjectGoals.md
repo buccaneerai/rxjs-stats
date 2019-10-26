@@ -1,4 +1,4 @@
-## Project Goals
+## Package Goals & Features
 
 **Expressive & Declarative**.  Users should be able to run common mathematical, statistical and data munging calculations using conventional RxJS operator syntax. This project embraces RxJS!
 
@@ -6,7 +6,7 @@
 
 **Accessible and well documentated**: The project should be welcoming to new contributors and users.  This means providing great documentation and onboarding for contributors!
 
-*Opinionated**.  The goal is to build a great package for the majority of users.  Sometimes that means saying no to ideas that make the package better for some niche of users but worse for the ecosystem as a whole.  Contributors and project maintainers should be honest about which features are not likely to be included in the core package.  For these types of things, we recommend users create their own operators that can be appended by those who want them.
+**Opinionated**.  The goal is to build a great package for the majority of users.  Sometimes that means saying no to ideas that make the package better for some niche of users but worse for the ecosystem as a whole.  Contributors and project maintainers should be honest about which features are not likely to be included in the core package.  For these types of things, we recommend users create their own operators that can be appended by those who want them.
 
 **Fully reactive online algorithms**. Instead of running mathematical calculations on large matrices which hog memory and compute power, `rxjs-stats` allows calculations to be run incrementally on streams \(something mathematicians "online algorithms"\) which cache only the minimum amount of information necessary to calculate the desired result.  The result is updated as more data is streamed into the pipeline.  This allows for performant, real-time calculations.
 

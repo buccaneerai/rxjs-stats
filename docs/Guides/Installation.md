@@ -10,7 +10,7 @@ Or with `yarn`:
 yarn add @buccaneer/rxjs-stats
 ```
 
-|-Platform-|-Support-|
+| Platform | Support |
 |----------|---------|
 |node.js (>10.0)|✅|
 |Browsers|✅|
