@@ -2,7 +2,7 @@
 Emits an `Error` if any item in the `Observable` is `NaN` or of a type that isn't a JavaScript `Number` object.
 
 # Examples
-```
+```js
 import { throwUnlessNum } from '@buccaneer/rxjs-stats';​
 
 const numbers = [

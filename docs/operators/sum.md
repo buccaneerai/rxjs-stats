@@ -2,7 +2,7 @@
 Calculates the sum of all items in an `Observable`.
 
 # Examples
-```
+```js
 import { from } from 'rxjs';
 import { sum } from '@buccaneer/rxjs-stats';
 
