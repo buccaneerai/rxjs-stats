@@ -12,4 +12,4 @@
   * [recall](operators/recall.md)
   * [roundTo](operators/roundTo.md)
   * [sum](operators/sum.md)
-  * [throwUnlessNumber](operators/throwunlessnumber.md)
+  * [throwUnlessNumber](operators/throwUnlessNumber.md)
