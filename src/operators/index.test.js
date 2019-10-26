@@ -12,11 +12,11 @@ describe('operators', () => {
         'precision',
         'recall',
         'roundTo',
-        'stdev',
-        // 'sum',
+        // 'stdev',
+        'sum',
         'throwUnlessNum',
         // 'variance',
       ];
-      expect(Object.keys(operators)).to.equal(api);
+      expect(Object.keys(operators)).to.deep.equal(api);
     });
 });
