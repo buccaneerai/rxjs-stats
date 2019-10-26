@@ -1,8 +1,11 @@
 # Table of contents
 
-* [What is rxjs-stats](README.md)
+* [Overview](../README.md)
 * [Guides](guides/README.md)
-  * [Installation](guides/installation.md)
+  * [Installation](Guides/Installation.md)  
+  * [Quick Start](Guides/GettingStarted.md)
+  * [Goals & Design Philosophy](Guides/ProjectGoals.md)
+  * [Contributing](../CONTRIBUTING.md)
 * [operators](operators/README.md)
   * [accuracy](operators/accuracy.md)
   * [change](operators/change.md)
