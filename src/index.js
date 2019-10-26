@@ -1,3 +1,3 @@
-import * as _operators from 'operators';
+import operators from './operators/index';
 
-export const operators = _operators;
+export default operators;
