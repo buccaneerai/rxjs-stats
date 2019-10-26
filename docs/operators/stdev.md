@@ -1,17 +1,22 @@
-# Description
-Computes the sample standard deviation of an `Observable` using [Welford's Online Algorithm](https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Welford's_online_algorithm).
+# stdev
 
-### stdev()
+## Description
 
-### Arguments
+Computes the sample standard deviation of an `Observable` using \[Welford's Online Algorithm\]\([https://en.wikipedia.org/wiki/Algorithms\_for\_calculating\_variance\#Welford's\_online\_algorithm](https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Welford's_online_algorithm)\).
+
+#### stdev\(\)
+
+#### Arguments
+
 None
 
-## Options
+### Options
+
 None
 
-# Examples
+## Examples
 
-``` javascript
+```javascript
 import { from } from 'rxjs';
 import { takeLast } from 'rxjs';
 import { stdev, roundTo } from '@buccaneer/rxjs-stats';
@@ -26,3 +31,4 @@ stdev$.subscribe(console.log);
 // Output:
 // 164.71187
 ```
+
