@@ -1,10 +1,11 @@
 # Table of contents
 
 * [Overview](README.md)
-* [Installation](Guides/Installation.md)  
-* [Quick Start](Guides/GettingStarted.md)
-* [Goals & Design Philosophy](Guides/ProjectGoals.md)
-* [Contributing](https://github.com/buccaneerai/rxjs-stats/blob/master/Contributing.md)
+* [Guides](guides/README.md)
+  * [Installation](Guides/Installation.md)  
+  * [Quick Start](Guides/GettingStarted.md)
+  * [Goals & Design Philosophy](Guides/ProjectGoals.md)
+  * [Contributing](https://github.com/buccaneerai/rxjs-stats/blob/master/CONTRIBUTING.md)
 * [operators](operators/README.md)
   * [accuracy](operators/accuracy.md)
   * [change](operators/change.md)
