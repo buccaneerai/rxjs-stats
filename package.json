@@ -1,6 +1,6 @@
 {
   "name": "@buccaneer/rxjs-stats",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "build/index.js",
   "description": "The statistical toolkit for RxJS",
   "repository": "https://github.com/buccaneerai/rxjs-stats.git",
