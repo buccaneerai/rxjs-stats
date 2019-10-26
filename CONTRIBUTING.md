@@ -1,5 +1,5 @@
 # Contributing
-:thumbsup: Thank you for your interest in contributing.
+:thumbsup: Thank you for your interest in contributing.  To develop better data science tools, JavaScript very much needs the help of opensource contributors!
 
 ## The Code
 Let's keep things simple.  As contributors to the [Swashbuckler](https://swashbuckler.ai) project, we all agree to the following social contract:
@@ -15,8 +15,13 @@ If you agree, then great! Welcome aboard matey!
 
 ## Getting started
 
+### Dependencies
+Contributors will need to install these dependencies:
+- node.js >10 (nvm is recommended but not required)
+- [yarn](https://yarnpkg.com/en/) >1.12
+
 ### Installation
-To contribute to rxjs-stats, you'll need a working copy of the source code:
+To contribute to `rxjs-stats`, you'll need a working copy of the source code:
 ```
 git clone https://github.com/buccaneerai/rxjs-stats.git
 cd rxjs-stats
@@ -24,17 +29,19 @@ yarn install
 ```
 
 ## Recommended Workflow
-We generally use the "pull request" workflow for all changes to the package:
+We generally use the "pull request" workflow for all changes to the package. It typically works like this:
 - Cut a feature branch from dev: `git checkout -b new-feature`
 - Make changes on the branch
 - Run tests: `yarn test`
 - Lint the code (using Airbnb Style): `yarn lint`
-- Push it to GitHub
-- Make a pull request to `dev`
-- A project maintainer will review the pull request
+- Commit changes to the branch and push it to GitHub
+- Make a pull request to the `dev` branch
+- A project maintainer will review the pull request and do a code review
+
+:bulb: If you aren't a listed contributor to the project, then you can also fork the repository and make a pull request.
 
 ## Creating new operators
-If you want to create new operators, [we have a guide for that here](https://buccaneerai/rxjs-stats/blob/master/docs/Guides/CreatingOperators.md).
+If you want to create new operators, [we have a guide for that here](https://github.com/buccaneerai/rxjs-stats/blob/master/docs/Guides/CreatingOperators.md).
 
 ## Communication
 If enough contributors want to be involved, then we'll setup a chatroom.  In the meantime, you can [email the project authors](mailto:opensource@buccaneer.ai).

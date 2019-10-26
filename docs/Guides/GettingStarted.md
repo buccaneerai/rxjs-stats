@@ -1,9 +1,11 @@
-# Quick Start
-
 # Install
+
+#### npm
 ```
 npm i @buccaneer/rxjs-stats --save
-# Or
+```
+#### yarn
+```
 yarn add @buccaneer/rxjs-stats
 ```
 
