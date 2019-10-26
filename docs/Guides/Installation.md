@@ -7,7 +7,7 @@ npm i @buccaneer/rxjs-stats --save
 
 Or with `yarn`:
 ```bash
-yarn install @buccaneer/rxjs-stats
+yarn add @buccaneer/rxjs-stats
 ```
 
 |-Platform-|-Support-|
