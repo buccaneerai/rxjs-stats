@@ -1,5 +1,4 @@
 import isNil from 'lodash/isNil';
-import BigNumber from 'bignumber.js';
 import { zip } from 'rxjs';
 import { filter, map, share } from 'rxjs/operators';
 

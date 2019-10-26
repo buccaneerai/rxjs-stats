@@ -1,7 +1,7 @@
 import isNil from 'lodash/isNil';
 import { filter, map, scan } from 'rxjs/operators';
 
-function reducer([priorNum, delta], nextNum) {
+function reducer([priorNum,], nextNum) {
   if (isNil(priorNum)) return [nextNum, null];
   return [
     nextNum,

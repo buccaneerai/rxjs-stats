@@ -1,6 +1,6 @@
 import { map, scan } from 'rxjs/operators';
 
-const reducer = function reducer([mean, sum, index], nextNum) {
+const reducer = function reducer([, sum, index], nextNum) {
   return [
     (sum + nextNum) / (index + 1),
     sum + nextNum,
