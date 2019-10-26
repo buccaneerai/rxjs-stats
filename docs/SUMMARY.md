@@ -11,6 +11,7 @@
   * [precision](operators/precision.md)
   * [recall](operators/recall.md)
   * [roundTo](operators/roundTo.md)
+  * [stdev](operators/stdev.md)
   * [sum](operators/sum.md)
   * [throwUnlessNumber](operators/throwUnlessNumber.md)
   * [variance](operators/variance.md)
