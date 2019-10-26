@@ -2,7 +2,7 @@
 
 * [What is rxjs-stats](README.md)
 * [Guides](Guides/README.md)
-  * [Installation](Guides/installation.md)
+  * [Installation](Guides/Installation.md)
 * [operators](operators/README.md)
   * [accuracy](operators/accuracy.md)
   * [change](operators/change.md)
