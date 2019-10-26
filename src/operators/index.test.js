@@ -12,7 +12,7 @@ describe('operators', () => {
         'precision',
         'recall',
         'roundTo',
-        // 'stdev',
+        'stdev',
         'sum',
         'throwUnlessNum',
         'variance',
