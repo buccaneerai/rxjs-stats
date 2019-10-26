@@ -8,4 +8,4 @@ export { default as roundTo } from './roundTo';
 // export { default as stdev } from './stdev';
 export { default as sum } from './sum';
 export { default as throwUnlessNum } from './throwUnlessNum';
-// export { default as variance } from './variance';
+export { default as variance } from './variance';
