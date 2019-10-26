@@ -1,4 +1,4 @@
-# What is rxjs-stats for?
+# What is rxjs-stats
 
 ## Purpose
 
@@ -15,6 +15,4 @@ Why does this package exist? The engineering team at [Buccaneer](https://www.buc
 * **Minimal footprint**.  Most operators are written as simple functions that contain under 20 lines of code.  This keeps the package size lean and the codebase easy to understand.
 * **Asynchronous**.  Since `rxjs-stats` uses rxjs, it is agnostic to whether observables are fed by asynchronous sources or local memory.
 * **Secure**.  `rxjs-stats` has only a few npm dependencies which greatly reduces the attack surface.  It also uses a CD system that includes package security checks prior to any release.
-
-
 

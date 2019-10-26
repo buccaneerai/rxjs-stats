@@ -1,8 +1,8 @@
 # Table of contents
 
 * [What is rxjs-stats](README.md)
-* [Guides](Guides/README.md)
-  * [Installation](Guides/Installation.md)
+* [Guides](guides/README.md)
+  * [Installation](guides/installation.md)
 * [operators](operators/README.md)
   * [accuracy](operators/accuracy.md)
   * [change](operators/change.md)
@@ -10,8 +10,9 @@
   * [mean](operators/mean.md)
   * [precision](operators/precision.md)
   * [recall](operators/recall.md)
-  * [roundTo](operators/roundTo.md)
+  * [roundTo](operators/roundto.md)
   * [stdev](operators/stdev.md)
   * [sum](operators/sum.md)
-  * [throwUnlessNumber](operators/throwUnlessNumber.md)
+  * [throwUnlessNumber](operators/throwunlessnumber.md)
   * [variance](operators/variance.md)
+

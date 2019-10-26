@@ -1,17 +1,22 @@
-# Description
-Computes the variance of an `Observable` using [Welford's Online Algorithm](https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Welford's_online_algorithm).
+# variance
+
+## Description
+
+Computes the variance of an `Observable` using \[Welford's Online Algorithm\]\([https://en.wikipedia.org/wiki/Algorithms\_for\_calculating\_variance\#Welford's\_online\_algorithm](https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Welford's_online_algorithm)\).
 
 By default, it will compute the sample variance.
 
-### variance(sample: <Boolean>)
+### variance\(sample: \)
 
 ### Arguments
-**sample**: The default is `true`. If `true`, then it will calculate the sample variance.  Otherwise, it will calculate population variance.
 
-# Examples
+**sample**: The default is `true`. If `true`, then it will calculate the sample variance. Otherwise, it will calculate population variance.
+
+## Examples
 
 ### Sample Variance
-``` javascript
+
+```javascript
 import { from } from 'rxjs';
 import { takeLast } from 'rxjs';
 import { variance } from '@buccaneer/rxjs-stats';
@@ -27,7 +32,8 @@ variance$.subscribe(console.log);
 ```
 
 ### Population Variance
-``` javascript
+
+```javascript
 import { from } from 'rxjs';
 import { takeLast } from 'rxjs';
 import { variance } from '@buccaneer/rxjs-stats';
@@ -41,3 +47,4 @@ variance$.subscribe(console.log);
 // Output:
 // 21704
 ```
+

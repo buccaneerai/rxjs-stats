@@ -1,8 +1,12 @@
-# Description
+# throwUnlessNumber
+
+## Description
+
 Emits an `Error` if any item in the `Observable` is `NaN` or of a type that isn't a JavaScript `Number` object.
 
-# Examples
-```js
+## Examples
+
+```javascript
 import { throwUnlessNum } from '@buccaneer/rxjs-stats';​
 
 const numbers = [
@@ -23,5 +27,5 @@ output$.pipe(console.log, console.log);
 // 0
 // 1
 // Error
-
 ```
+
