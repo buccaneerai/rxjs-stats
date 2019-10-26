@@ -4,11 +4,20 @@
   <img src="https://img.shields.io/npm/v/@buccaneer/rxjs-stats.svg" alt="Version">
 </a>
 
-## Purpose
+<p>
+  <img src="https://github.com/buccaneerai/rxjs-stats/blob/dev/docs/rxjs-stats.png" />
+</p>
 
-This package provides a set of of [RxJS 6](http://rxjs-dev.firebaseapp.com/) operators to perform common calculations used in statistics, data science, math, analytics and machine learning. The implementations are written in pure JavaScript and are lightweight, reactive, performant, declarative and isomorphic.
+## Overview
+
+`rxjs-stats` is a set of of [RxJS 6](http://rxjs-dev.firebaseapp.com/) operators to perform common calculations used in statistics, data munging, data science, math, analytics and machine learning. 
+
+It helps you write reactive applications that use expressive functional programming, behave predictably, run in most environments using pure JavaScript (client, server, and native), and are easy to test. It provides a great developer experience by keeping code simple and providing live, real-time calculations.  The implementations are lightweight, reactive, performant, declarative and isomorphic.
+
+It is part of the [Swashbuckler](https://swashbuckler.ai) project, which is a larger effort to create second-to-none data science tools for software makers who love JavaScript.
 
 ## Documentation
+- [Quick Start](https://app.gitbook.com/@brianbuccaneer/s/quick-start)
 - [Documentation](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats)
 - [Guides](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides)
 - [Full List of operators](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/operators)

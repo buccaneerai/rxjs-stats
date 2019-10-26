@@ -1,10 +1,11 @@
-# What is rxjs-stats for?
+# Overview
 
 ## Purpose
+`rxjs-stats` is the real-time statistics toolkit for [RxJS](https://rxjs-dev.firebaseapp.com).  It is part of [Swashbuckler](https://swashbuckler.ai) project which aims to create second-to-none tools for performing data science and machine learning in pure JavaScript.
 
-Why does this package exist? The engineering team at [Buccaneer](https://www.buccaneer.ai) wanted a set of of RxJS 6 operators to perform common calculations used in statistics, data science, math, analytics and machine learning. These tools did not exist so they built them from scratch. rxjs-stats was born and released as an opensource package so the entire Javascript community could use it, improve upon it and build cool stuff!
+`rxjs-stats` provides RxJS 6 operators which implement calculations commonly used in data science, statistics, analytics, machine learning and devops.  This allows for users to calculate statistics in a way that is reactive, declarative, performant and reliable. It makes it very simple to compute statistics from `Observable` streams.
 
-💡rxjs-stats is part of a larger effort to build top-notch data science tools for JavaScript. If you'd like to help make this happen, contributors and sponsors will be welcomed with open arms!
+If you are a (current or aspiring) data scientist or machine learning engineer who loves JavaScript, then please consider joining the Swashbuckler community, becoming a contributor, supporting the projects on GitHub or encouraging your organization to sponsor!
 
 ## Features
 
@@ -15,6 +16,3 @@ Why does this package exist? The engineering team at [Buccaneer](https://www.buc
 * **Minimal footprint**.  Most operators are written as simple functions that contain under 20 lines of code.  This keeps the package size lean and the codebase easy to understand.
 * **Asynchronous**.  Since `rxjs-stats` uses rxjs, it is agnostic to whether observables are fed by asynchronous sources or local memory.
 * **Secure**.  `rxjs-stats` has only a few npm dependencies which greatly reduces the attack surface.  It also uses a CD system that includes package security checks prior to any release.
-
-
-
