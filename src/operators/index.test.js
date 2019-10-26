@@ -12,10 +12,10 @@ describe('operators', () => {
         'precision',
         'recall',
         'roundTo',
-        // 'stdev',
+        'stdev',
         'sum',
         'throwUnlessNum',
-        // 'variance',
+        'variance',
       ];
       expect(Object.keys(operators)).to.deep.equal(api);
     });
