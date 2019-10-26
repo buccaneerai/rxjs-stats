@@ -12,7 +12,7 @@ It helps you write reactive applications that use expressive functional programm
 It is part of the [Swashbuckler](https://swashbuckler.ai) project, which is a larger effort to create second-to-none data science tools for software makers who love JavaScript.
 
 ## Documentation
-- **New Users, Start Here**: [Quick Start](https://app.gitbook.com/@brianbuccaneer/s/quick-start)
+- **New Users, Start Here**: [Quick Start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/gettingstarted)
 - [Documentation](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats)
 - [Guides](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides)
 - [Full List of operators](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/operators)
