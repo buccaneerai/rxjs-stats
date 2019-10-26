@@ -3,6 +3,11 @@ Computes the variance of an `Observable` using [Welford's Online Algorithm](http
 
 By default, it will compute the sample variance.
 
+### variance(sample: <Boolean>)
+
+### Arguments
+**sample**: The default is `true`. If `true`, then it will calculate the sample variance.  Otherwise, it will calculate population variance.
+
 # Examples
 
 ### Sample Variance
