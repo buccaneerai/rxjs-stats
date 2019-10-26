@@ -2,7 +2,7 @@
 
 * [Overview](../README.md)
 * [Guides](guides/README.md)
-  * [Installation](Guides/Installation.md)  
+  * [Installation](Guides/installation.md)  
   * [Quick Start](Guides/GettingStarted.md)
   * [Goals & Design Philosophy](Guides/ProjectGoals.md)
   * [Contributing](../CONTRIBUTING.md)
