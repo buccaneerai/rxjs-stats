@@ -12,7 +12,7 @@ It helps you write reactive applications that use expressive functional programm
 It is part of the [Swashbuckler](https://swashbuckler.ai) project, which is a larger effort to create second-to-none data science tools for software makers who love JavaScript.
 
 ## Documentation
-- **New Users, Start Here** :arrow_right: [Quick Start](https://app.gitbook.com/@brianbuccaneer/s/quick-start)
+- **New Users, Start Here**: [Quick Start](https://app.gitbook.com/@brianbuccaneer/s/quick-start)
 - [Documentation](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats)
 - [Guides](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides)
 - [Full List of operators](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/operators)
@@ -21,14 +21,15 @@ It is part of the [Swashbuckler](https://swashbuckler.ai) project, which is a la
 If you share the goal of creating amazing data science tools for the Javascript community, then here are some ways to help:
 - Star us on Github ✨ :octocat: ✨
 - [Become a contributor (even small contributions matter!)](https://github.com/buccaneerai/rxjs-stats/blob/master/CONTRIBUTING.md) 👑
-<!--- - [Add your organization's logo to the list of users]() --->
+- [Are we missing the operator you need? Make a pull request to add it!](https://github.com/buccaneerai/rxjs-stats/blob/master/docs/Guides/CreatingOperators.md) 🤦 
 - [Follow the Swashbuckler Blog](https://medium.com/buccaneer) ✒️
 - Report & Debug Issues on GitHub 🌊
+<!--- - [Add your organization's logo to the list of users]() --->
 <!--- - [Join Community Discussions]() 🐬 --->
 <!--- - [Become a sponser (or encourage your employer to)]()  ⚓️--->
-<!--- - [Give Feedback]()
+<!--- - [Give Feedback]() --->
 
-## Used by
+<!--- ## Used by --->
 
 ## License
 MIT
