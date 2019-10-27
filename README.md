@@ -19,11 +19,11 @@ It is part of the [Swashbuckler](https://swashbuckler.ai) project, which is a la
 
 ## Community
 If you share the goal of creating amazing data science tools for the Javascript community, then here are some ways to help:
-- Star us on Github ✨ :octocat: ✨
+- Star us on <a href='https://github.com/buccaneerai/rxjs-stats'>Github</a> ✨ :octocat: ✨
 - [Become a contributor (even small contributions matter!)](https://github.com/buccaneerai/rxjs-stats/blob/master/CONTRIBUTING.md) 👑
 - [Are we missing the operator you need? Make a pull request to add it!](https://github.com/buccaneerai/rxjs-stats/blob/master/docs/Guides/CreatingOperators.md) 🤦 
 - [Follow the Swashbuckler Blog](https://medium.com/buccaneer) ✒️
-- Report & Debug Issues on GitHub 🌊
+- Report & Debug Issues on <a href='https://github.com/buccaneerai/rxjs-stats'>Github</a> 🌊
 <!--- - [Add your organization's logo to the list of users]() --->
 <!--- - [Join Community Discussions]() 🐬 --->
 <!--- - [Become a sponser (or encourage your employer to)]()  ⚓️--->
