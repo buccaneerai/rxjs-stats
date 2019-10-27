@@ -1,5 +1,5 @@
 # Contributing
-:thumbsup: Thank you for your interest in contributing.  To develop better data science tools, JavaScript very much needs the help of opensource contributors!
+👍 Thank you for your interest in contributing.  To develop better data science tools, JavaScript very much needs the help of opensource contributors!
 
 ## The Code
 Let's keep things simple.  As contributors to the [Swashbuckler](https://swashbuckler.ai) project, we all agree to the following social contract:
@@ -38,7 +38,7 @@ We generally use the "pull request" workflow for all changes to the package. It 
 - Make a pull request to the `dev` branch
 - A project maintainer will review the pull request and do a code review
 
-:bulb: If you aren't a listed contributor to the project, then you can also fork the repository and make a pull request.
+💡 If you aren't a listed contributor to the project, then you can also fork the repository and make a pull request.
 
 ## Creating new operators
 If you want to create new operators, [we have a guide for that here](https://github.com/buccaneerai/rxjs-stats/blob/master/docs/Guides/CreatingOperators.md).
