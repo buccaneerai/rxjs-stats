@@ -50,7 +50,7 @@ describe('countValues', () => {
   }));
 
   it('should handle null values and undefined values', marbles(m => {
-    const input$ = m.cold('0-(12)-345--6|', {
+    const input$ = m.cold('0-(12)-34|', {
       0: null,
       1: 'Frodo',
       2: 'Potter',
@@ -58,7 +58,7 @@ describe('countValues', () => {
       4: 'Potter',
     });
     const actual$ = input$.pipe(countValues());
-    const expected$ = m.cold('0-(12)-345--6|', {
+    const expected$ = m.cold('0-(12)-34|', {
       0: [{value: 'null', count: 1}],
       1: [{value: 'null', count: 1}, {value: 'Frodo', count: 1}],
       2: [{value: 'null', count: 1}, {value: 'Frodo', count: 1}, {value: 'Potter', count: 1}],
