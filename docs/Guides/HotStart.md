@@ -10,21 +10,21 @@ import { takeLast } from 'rxjs/operators';
 import { mean } from '@buccaneer/rxjs-stats';
 
 const number$ = from([1, 2, 3, 42]);
-const mean$ = number$.pipe(
+const initialMean$ = number$.pipe(
   mean(),
   takeLast(1)
 );
-mean$.subscribe(console.log);
+initialMean$.subscribe(console.log);
 // 12
 ```
 
-The mean of the number stream above is `12`.  But suppose a new data points comes in and the mean needs to be updated. The hotstart technique can used to calculate the new mean based on the original one:
+The mean of the number stream above is `12`.  But suppose some new data points come in and, as a result, the mean needs to be updated. The hotstart technique can used to calculate the new mean based on the original one:
 ```javascript
-// The mean operator's hotstart value requires the following values:
-const hotstart = {average: 12, sum: 48, index: 3}; 
+// The mean operator's initial state can be set like so:
+const initialState = {average: 12, sum: 48, index: 3}; 
 const newNumber$ = from([50, 9, 20]);
 const newMean$ = newNumber$.pipe(
-  mean(hotstart),
+  mean(initialState),
   takeLast(1)
 );
 newMean$.subscribe(console.log);
