@@ -39,4 +39,24 @@ describe('precision', () => {
       m.expect(actual$).toBeObservable(expected$);
     })
   );
+
+  it('should handle warm start', marbles(m => {
+    const inputs = {
+      0: [1, 1], // TP
+      1: [1, 1], // TP
+      2: [1, 0], // FN
+    };
+    const input$ = m.cold('-01--2|', inputs);
+    const initialState = {
+      truePositives: 2,
+      falsePositives: 3,
+    };
+    const actual$ = input$.pipe(precision(initialState));
+    const expected$ = m.cold('-01--2|', {
+      0: 0.50,
+      1: (4/7),
+      2: (4/7),
+    });
+    m.expect(actual$).toBeObservable(expected$);
+  }));
 });
