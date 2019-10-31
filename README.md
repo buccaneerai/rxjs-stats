@@ -7,7 +7,7 @@
 
 `rxjs-stats` is a set of of [RxJS 6](http://rxjs-dev.firebaseapp.com/) operators to perform common calculations used in statistics, data munging, data science, math, analytics and machine learning. 
 
-It helps you write reactive applications that use expressive functional programming, behave predictably, run in most environments using pure JavaScript (client, server, and native), and are easy to test. It provides a great developer experience by keeping code simple and providing live, real-time calculations.  The implementations are lightweight, reactive, performant, declarative and isomorphic.
+It helps you write reactive applications that use expressive functional programming, behave predictably, run in most environments using pure JavaScript (client, server, and native), and are easy to test. It provides a great developer experience by keeping code simple and providing live, real-time calculations.  The implementations are lightweight, performant, declarative and isomorphic.
 
 It is part of the [Swashbuckler](https://swashbuckler.ai) project, which is a larger effort to create second-to-none data science tools for software makers who love JavaScript.
 
