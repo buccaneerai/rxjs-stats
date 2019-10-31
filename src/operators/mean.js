@@ -8,9 +8,9 @@ const reducer = function reducer({sum, index}, nextNum) {
   };
 };
 
-const mean = function mean(hotStart = {average: null, sum: 0, index: 0}) {
+const mean = function mean(initialState = {average: null, sum: 0, index: 0}) {
   return source$ => source$.pipe(
-    scan(reducer, hotStart),
+    scan(reducer, initialState),
     map(({average}) => average)
   );
 };

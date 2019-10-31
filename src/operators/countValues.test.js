@@ -1,3 +1,4 @@
+import times from 'lodash/times';
 import {expect} from 'chai';
 import {marbles} from 'rxjs-marbles/mocha';
 
@@ -93,6 +94,7 @@ describe('countValues', () => {
   }));
 
   it('should cache only the top 50 values by default', marbles(m => {
+
     expect(false).to.be.true;
   }));
 
