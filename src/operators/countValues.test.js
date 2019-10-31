@@ -69,7 +69,27 @@ describe('countValues', () => {
   }));
 
   it('should properly handle hotstart values', marbles(m => {
-    expect(false).to.be.true;
+    const input$ = m.cold('0-(12)-345--6|', {
+      0: 'Luke',
+      1: 'Frodo',
+      2: 'Potter',
+      3: 'Luke',
+      4: 'Potter',
+      5: 'Potter',
+      6: 'Potter',
+    });
+    const hotstart = {'Luke': 24, 'Frodo': 42};
+    const actual$ = input$.pipe(countValues(hotstart));
+    const expected$ = m.cold('0-(12)-345--6|', {
+      0: [{value: 'Luke', count: 25}, {value: 'Frodo', count: 42}],
+      1: [{value: 'Luke', count: 25}, {value: 'Frodo', count: 43}],
+      2: [{value: 'Luke', count: 25}, {value: 'Frodo', count: 43}, {value: 'Potter', count: 1}],
+      3: [{value: 'Luke', count: 26}, {value: 'Frodo', count: 43}, {value: 'Potter', count: 1}],
+      4: [{value: 'Luke', count: 26}, {value: 'Frodo', count: 43}, {value: 'Potter', count: 2}],
+      5: [{value: 'Luke', count: 26}, {value: 'Frodo', count: 43}, {value: 'Potter', count: 3}],
+      6: [{value: 'Luke', count: 26}, {value: 'Frodo', count: 43}, {value: 'Potter', count: 4}],
+    });
+    m.expect(actual$).toBeObservable(expected$);
   }));
 
   it('should cache only the top 50 values by default', marbles(m => {
