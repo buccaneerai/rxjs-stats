@@ -47,4 +47,28 @@ describe('f1', () => {
       m.expect(actual$).toBeObservable(expected$);
     })
   );
+
+  it('should handle warm start', marbles(m => {
+    const inputs = {
+      7: [1, 1], // TP
+      8: [1, 1], // TP
+      9: [1, 1], // TP
+    };
+    const input$ = m.cold('-7-8-9|', inputs);
+    const initialState = {
+      truePositives: 2,
+      falsePositives: 1,
+      falseNegatives: 2,
+    };
+    const actual$ = input$.pipe(
+      f1(initialState),
+      roundTo(6)
+    );
+    const expected$ = m.cold('-7-8-9|', {
+      7: 0.666667,
+      8: 0.727273,
+      9: 0.769231,
+    });
+    m.expect(actual$).toBeObservable(expected$);
+  }));
 });
