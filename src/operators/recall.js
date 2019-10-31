@@ -5,24 +5,32 @@ function computeRecall(truePositives, falseNegatives) {
   return truePositives / (truePositives + falseNegatives);
 }
 
-function reducer([truePositive, falseNegative], [trueValue, predictedValue]) {
-  const truePositives = (
+function reducer({truePositives, falseNegatives}, [trueValue, predictedValue]) {
+  const newTruePositives = (
     predictedValue === 1 && predictedValue === trueValue
-    ? truePositive + 1
-    : truePositive
+    ? truePositives + 1
+    : truePositives
   );
-  const falseNegatives = (
+  const newFalseNegatives = (
     predictedValue === 0 && predictedValue !== trueValue
-    ? falseNegative + 1
-    : falseNegative
+    ? falseNegatives + 1
+    : falseNegatives
   );
-  return [truePositives, falseNegatives];
+  return {
+    truePositives: newTruePositives,
+    falseNegatives: newFalseNegatives
+  };
 }
 
-const recall = function recall() {
+const recall = function recall(
+  initialState = {truePositives: 0, falseNegatives: 0}
+) {
   return source$ => source$.pipe(
-    scan(reducer, [0, 0]),
-    map(counts => computeRecall(...counts))
+    scan(reducer, initialState),
+    map(({truePositives, falseNegatives}) => computeRecall(
+      truePositives,
+      falseNegatives
+    ))
   );
 };
 

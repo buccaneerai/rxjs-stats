@@ -39,4 +39,29 @@ describe('recall', () => {
       m.expect(actual$).toBeObservable(expected$);
     })
   );
+
+  it(
+    'should compute recall correctly when given a warm start value',
+    marbles(m => {
+      const inputs = {
+        0: [1, 1], // TP
+        1: [1, 1], // TP
+        2: [1, 0], // FN
+      };
+      const input$ = m.cold('-01--2|', inputs);
+      const actual$ = input$.pipe(recall({
+        truePositives: 500,
+        falseNegatives: 50
+      }));
+      const expected$ = m.cold(
+        '-01--2|',
+        {
+          0: (501 / 551),
+          1: (502 / 552),
+          2: (502 / 553),
+        }
+      );
+      m.expect(actual$).toBeObservable(expected$);
+    })
+  );
 });
