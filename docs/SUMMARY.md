@@ -4,6 +4,7 @@
 * [Guides](guides/README.md)
   * [Installation](guides/installation.md)  
   * [Quick Start](Guides/GettingStarted.md)
+  * [Using Hotstarts](Guides/HotStart.md)
   * [Goals & Design Philosophy](Guides/ProjectGoals.md)
   * [Contributing](../CONTRIBUTING.md)
 * [operators](operators/README.md)
