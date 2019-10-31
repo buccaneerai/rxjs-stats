@@ -14,9 +14,9 @@ const reducer = function reducer(valueCounts, nextValue) {
   };
 };
 
-const countValues = function countValues(hotStart = {}) {
+const countValues = function countValues(initialState = {}) {
   return source$ => source$.pipe(
-    scan(reducer, hotStart),
+    scan(reducer, initialState),
     map(valueCounts => toPairs(valueCounts)),
     map(pairs => pairs.map(p => {
       const num = parseFloat(p[0]);
