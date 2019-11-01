@@ -6,28 +6,35 @@
 // https://www.investopedia.com/ask/answers/021215/what-difference-between-standard-deviation-and-variance.asp
 import { filter, map, scan, skip } from 'rxjs/operators';
 
-function reducer([index, mean, m2], nextNum) {
-  if (index === 0) return [index + 1, nextNum, 0];
+function reducer({index, mean, m2}, nextNum) {
+  if (index === 0) return {index: index + 1, mean: nextNum, m2: 0};
   const delta = nextNum - mean;
   const newMean = (mean + (delta / (index + 1)));
   const delta2 = nextNum - newMean;
-  return [
-    index + 1,
-    newMean,
-    m2 + (delta * delta2),
-  ];
+  return {
+    index: index + 1,
+    mean: newMean,
+    m2: m2 + (delta * delta2),
+  };
 }
 
-const variance = function variance(sample = true) {
+const variance = function variance(
+  initialState,
+  sample = true
+) {
   return source$ => source$.pipe(
-    scan(reducer, [0, 0, null]),
-    filter(([index]) => index > 1),
-    map(([count,,m2]) => (
+    scan(reducer, initialState || {index: 0, mean: 0, m2: null}),
+    filter(({index}) => index > 1),
+    map(({index,m2}) => (
       sample
-      ? m2 / (count - 1)
-      : m2 / count
+      ? m2 / (index - 1)
+      : m2 / index
     )),
-    skip(1) // variance requires at least 2 numbers
+    skip( // variance requires at least 2 numbers
+      initialState && initialState.index > 1
+      ? 0
+      : 1
+    )
   );
 };
 

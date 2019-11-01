@@ -11,4 +11,12 @@ describe('mean', () => {
     const expected$ = m.cold('a--bc-d--e|', {a: 1, b: 1.5, c: 2, d: 2.5, e: 3});
     m.expect(actual$).toBeObservable(expected$);
   }));
+
+  it('should return correct mean when given a warmstart value', marbles(m => {
+    const num$ = m.cold('a--b|', {a: 6, b: 7});
+    const warmstart = {average: 3, sum: 15, index: 5};
+    const actual$ = num$.pipe(mean(warmstart));
+    const expected$ = m.cold('a--b|', {a: 3.5, b: 4});
+    m.expect(actual$).toBeObservable(expected$);
+  }));
 });

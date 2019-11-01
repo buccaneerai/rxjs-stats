@@ -11,35 +11,55 @@ const computeAccuracy = function computeAccuracy(
   return sum([truePositives, trueNegatives]) / total;
 };
 
-function reducer([tPos, fPos, tNeg, fNeg], [trueLabel, predictedLabel]) {
-  const truePositives = (
+function reducer(
+  {truePositives, falsePositives, trueNegatives, falseNegatives},
+  [trueLabel, predictedLabel]
+) {
+  const newTruePositives = (
     predictedLabel === 1 && predictedLabel === trueLabel
-    ? tPos + 1
-    : tPos
+    ? truePositives + 1
+    : truePositives
   );
-  const falsePositives = (
+  const newFalsePositives = (
     predictedLabel === 1
     && predictedLabel !== trueLabel
-    ? fPos + 1
-    : fPos
+    ? falsePositives + 1
+    : falsePositives
   );
-  const trueNegatives = (
+  const newTrueNegatives = (
     predictedLabel === 0 && predictedLabel === trueLabel
-    ? tNeg + 1
-    : tNeg
+    ? trueNegatives + 1
+    : trueNegatives
   );
-  const falseNegatives = (
+  const newFalseNegatives = (
     predictedLabel === 0 && predictedLabel !== trueLabel
-    ? fNeg + 1
-    : fNeg
+    ? falseNegatives + 1
+    : falseNegatives
   );
-  return [truePositives, falsePositives, trueNegatives, falseNegatives];
+  return {
+    truePositives: newTruePositives,
+    falsePositives: newFalsePositives,
+    trueNegatives: newTrueNegatives,
+    falseNegatives: newFalseNegatives
+  };
 }
 
-const accuracy = function accuracy() {
+const accuracy = function accuracy(
+  initialState = {
+    truePositives: 0,
+    falsePositives: 0,
+    trueNegatives: 0,
+    falseNegatives: 0
+  }
+) {
   return source$ => source$.pipe(
-    scan(reducer, [0, 0, 0, 0]),
-    map(counts => computeAccuracy(...counts))
+    scan(reducer, initialState),
+    map(counts => computeAccuracy(
+      counts.truePositives,
+      counts.falsePositives,
+      counts.trueNegatives,
+      counts.falseNegatives
+    ))
   );
 };
 

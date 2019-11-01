@@ -1,3 +1,4 @@
+import pick from 'lodash/pick';
 import isNil from 'lodash/isNil';
 import { zip } from 'rxjs';
 import { filter, map, share } from 'rxjs/operators';
@@ -19,11 +20,19 @@ function computeF1(recallScore, precisionScore) {
   //   );
 }
 
-const f1 = function f1() {
+const f1 = function f1(initialState = {
+  truePositives: 0,
+  falseNegatives: 0,
+  falsePositives: 0,
+}) {
   return source$ => {
     const sub$ = source$.pipe(share());
-    const recall$ = sub$.pipe(recall());
-    const precision$ = sub$.pipe(precision());
+    const recall$ = sub$.pipe(
+      recall(pick(initialState, 'truePositives', 'falseNegatives'))
+    );
+    const precision$ = sub$.pipe(
+      precision(pick(initialState, 'truePositives', 'falsePositives'))
+    );
     const f1$ = zip(recall$, precision$).pipe(
       map(([recallVal, precisionVal]) => computeF1(recallVal, precisionVal)),
       filter(score => !isNil(score))

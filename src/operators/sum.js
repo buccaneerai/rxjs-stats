@@ -1,8 +1,9 @@
-import { scan } from 'rxjs/operators';
+import { map, scan } from 'rxjs/operators';
 
-const sum = function sum() {
+const sum = function sum(initialState = {total: 0}) {
   return source$ => source$.pipe(
-    scan((memo, num) => memo + num, 0)
+    scan(({total}, num) => ({total: total + num}), initialState),
+    map(({total}) => total)
   );
 };
 

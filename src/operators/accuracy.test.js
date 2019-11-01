@@ -42,4 +42,29 @@ describe('accuracy', () => {
       m.expect(actual$).toBeObservable(expected$);
     })
   );
+
+  it('should handle warm start', marbles(m => {
+    const inputs = [
+        [1, 1], // TP
+        [1, 1], // TP
+        [1, 0], // FN
+      ];
+    const input$ = m.cold(
+      '-01--2|',
+      inputs.reduce((memo, pair, i) => ({...memo, [i]: pair}), {})
+    );
+    const initialState = {
+      truePositives: 2,
+      falsePositives: 3,
+      trueNegatives: 2,
+      falseNegatives: 0,
+    };
+    const actual$ = input$.pipe(accuracy(initialState));
+    const expected$ = m.cold('-01--2|', {
+      0: 0.625,
+      1: (6/9),
+      2: (6/10),
+    });
+    m.expect(actual$).toBeObservable(expected$);
+  }));
 });
