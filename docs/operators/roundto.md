@@ -4,15 +4,22 @@
 
 Rounds numbers in an `Observable` to the number of desired decimal places.
 
-### roundTo\(precision: \)
+## API
+```
+sum(numDecimalPlaces: Number)
+```
 
-### Arguments
+### Since
+0.5
 
-**precision**: An integer that indicates the number of decimal places to which numbers should be rounded.
+### Parameters
+* `numDecimalPlaces`: An integer that indicates the number of decimal places to which numbers should be rounded.
 
 ### Options
-
 None
+
+### Returns
+`Number`. (Numbers from `Observable`, rounded to the correct number of decimal places.)
 
 ## Examples
 

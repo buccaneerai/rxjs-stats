@@ -6,7 +6,7 @@ Calculates the sum of all items in an `Observable`.
 
 ## API
 ```
-countValues([initialState={counter: {}, keyCount: 0}])
+countValues([initialState={valueCounts: {}, keyCount: 0}])
 ```
 
 ### Since
@@ -16,7 +16,7 @@ countValues([initialState={counter: {}, keyCount: 0}])
 None
 
 ### Options
-- `initialState: Object`: Sets a [warm start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warm-start) value so that the calculation can continue from a starting point (instead of a blank state).  Example: `{counter: {myFirstValue: 32, mySecondValue: 5}, keyCount: 2}`.
+- `initialState: Object`: Sets a [warm start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warm-start) value so that the calculation can continue from a starting point (instead of a blank state).  Example: `{valueCounts: {myFirstValue: 32, mySecondValue: 5, myThirdValue: 42}, keyCount: 3}`.
 
 ### Returns
 `Number`. (The current sum of the `Observable`.)

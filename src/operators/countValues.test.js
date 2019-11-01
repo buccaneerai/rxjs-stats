@@ -79,7 +79,10 @@ describe('countValues', () => {
       5: 'Potter',
       6: 'Potter',
     });
-    const warmstart = {'Luke': 24, 'Frodo': 42};
+    const warmstart = {
+      keyCounts: 2,
+      valueCounts: {'Luke': 24, 'Frodo': 42}
+    };
     const actual$ = input$.pipe(countValues(warmstart));
     const expected$ = m.cold('0-(12)-345--6|', {
       0: [{value: 'Luke', count: 25}, {value: 'Frodo', count: 42}],

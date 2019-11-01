@@ -4,6 +4,23 @@
 
 Emits an `Error` if any item in the `Observable` is `NaN` or of a type that isn't a JavaScript `Number` object.
 
+## API
+```
+throwUnlessNum()
+```
+
+### Since
+0.5
+
+### Parameters
+None
+
+### Options
+None
+
+### Returns
+None. (Throws error if a non-number value is encountered.)
+
 ## Examples
 
 ```javascript
