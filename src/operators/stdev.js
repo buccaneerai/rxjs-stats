@@ -4,11 +4,12 @@ import { map } from 'rxjs/operators';
 import variance from './variance';
 
 const stdev = function stdev(
+  initialState,
   sample = true,
   _variance = variance
 ) {
   return source$ => source$.pipe(
-    _variance(sample),
+    _variance(initialState || {index: 0, mean: 0, m2: null}, sample),
     map(myVariance => Math.sqrt(myVariance))
   );
 };

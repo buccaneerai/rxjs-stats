@@ -26,4 +26,21 @@ describe('stdev', () => {
     });
     m.expect(actual$).toBeObservable(expected$);
   }));
+
+  it('should handle warm start value', marbles(m => {
+    const trueStandardDeviation = 164.71187;
+    const dogSizes = {
+      3: 430,
+      4: 300,
+    };
+    const num$ = m.cold('-3-4|', dogSizes);
+    const initialState = {index: 3, mean: 413.3333333333333, m2: 97266.66666666666};
+    const actual$ = num$.pipe(
+      stdev(initialState),
+      roundTo(6),
+      skip(1)
+    );
+    const expected$ = m.cold('---v|', {v: trueStandardDeviation});
+    m.expect(actual$).toBeObservable(expected$);
+  }));
 });
