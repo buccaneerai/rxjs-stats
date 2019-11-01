@@ -19,9 +19,12 @@ describe('stdev', () => {
     const actual$ = num$.pipe(
       stdev(),
       roundTo(6),
-      skip(2)
     );
-    const expected$ = m.cold('---------v|', {
+    const expected$ = m.cold('-1-(23)--4|', {
+      1: 91.923882,
+      2: 220.529665,
+      3: 180.25445,
+      4: 164.71187,
       v: trueStandardDeviation
     });
     m.expect(actual$).toBeObservable(expected$);
