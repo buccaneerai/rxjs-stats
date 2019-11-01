@@ -10,7 +10,7 @@ countValues([initialState={valueCounts: {}, keyCount: 0}])
 ```
 
 ### Since
-1.0
+1.2
 
 ### Parameters
 None

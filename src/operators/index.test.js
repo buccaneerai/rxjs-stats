@@ -7,6 +7,7 @@ describe('operators', () => {
       const api = [
         'accuracy',
         'change',
+        'countValues',
         'f1',
         'mean',
         'precision',
