@@ -8,6 +8,8 @@ describe('operators', () => {
         'accuracy',
         'change',
         'countValues',
+        'dirtyR',
+        'dirtyZScore',
         'f1',
         'mean',
         'precision',

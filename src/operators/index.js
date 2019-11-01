@@ -1,6 +1,8 @@
 export { default as accuracy } from './accuracy';
 export { default as change } from './change';
 export { default as countValues } from './countValues';
+export { default as dirtyR } from './dirtyR';
+export { default as dirtyZScore } from './dirtyZScore';
 export { default as f1 } from './f1';
 export { default as mean } from './mean';
 export { default as precision } from './precision';
