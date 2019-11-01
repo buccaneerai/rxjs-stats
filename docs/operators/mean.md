@@ -16,7 +16,7 @@ mean([initialState={average: 0, sum: 0, index: 0}])
 None
 
 ### Options
-- `initialState: Object {average: Number, sum: Number, index: Number`: Sets a [warm start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warm-start) value so that the mean calculation can continue from a non-zero starting point (instead of a blank state).
+- `initialState: Object {average: Number, sum: Number, index: Number`: Sets a [warm start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warmstarts) value so that the mean calculation can continue from a non-zero starting point (instead of a blank state).
 
 ### Returns
 `Number`. (The current mean of the `Observable`.)
@@ -57,8 +57,8 @@ mean$.subscribe(console.log);
 // 2.5
 ```
 
-### Hotstart
-Calculate a mean with an [initial warmstart value](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warm-start) (instead starting with a blank state):
+### Warm Start
+Calculate a mean with an [initial warmstart value](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warmstarts) (instead starting with a blank state):
 ```javascript
 import { from } from 'rxjs';
 import { mean } from '@buccaneer/rxjs-stats';

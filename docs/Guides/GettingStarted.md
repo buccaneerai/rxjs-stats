@@ -34,4 +34,4 @@ averageShipCount$.subscribe(console.log);
 
 # Next steps
 * Check out the [full list of operators](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/operators).
-* Learn about [Hotstart Pipelines](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warm-start)
+* Learn about [Hotstart Pipelines](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warmstarts)
