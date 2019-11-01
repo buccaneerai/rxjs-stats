@@ -6,7 +6,7 @@ Calculates the sum of all items in an `Observable`.
 
 ## API
 ```
-sum([initialState={sum: 0}])
+sum([initialState={total: 0}])
 ```
 
 ### Since
@@ -16,7 +16,7 @@ sum([initialState={sum: 0}])
 None
 
 ### Options
-- `initialState: Object {sum: Number}`: Sets a [warm start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warm-start) value so that the calculation can continue from a non-zero starting point (instead of a blank state).
+- `initialState: Object {total: Number}`: Sets a [warm start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warm-start) value so that the calculation can continue from a non-zero starting point (instead of a blank state).
 
 ### Returns
 `Number`. (The current sum of the `Observable`.)

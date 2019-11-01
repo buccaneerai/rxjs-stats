@@ -13,7 +13,7 @@ describe('sum', () => {
 
   it('should handle warm start value', marbles(m => {
     const input$ = m.cold('-a--bc---d|', {a: 2.5, b: -2.5, c: 3, d: 7});
-    const actual$ = input$.pipe(sum({sum: 50}));
+    const actual$ = input$.pipe(sum({total: 50}));
     const expected$ = m.cold('-a--bc---d|', {a: 52.5, b: 50, c: 53, d: 60});
     m.expect(actual$).toBeObservable(expected$);
   }));
