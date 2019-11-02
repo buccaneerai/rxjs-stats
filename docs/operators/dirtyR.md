@@ -6,7 +6,7 @@
 **Warning**: This method is called "dirty" because, by default, it will estimate R values using incremental estimates of the sample mean and standard deviation. This provides faster, streamable results but does not guarantee that the R value will be completely correct for all data sets.
 {% hint %}
 
-Estimates R (the correlation coefficient) of an `Observable`. It will compute the current sample mean and sample standard deviation of the stream and then use those to estimate R.  This allows it to provide estimates quickly and in real-time.  If you need to calculate a pure R (with complete correcness) then see the [pureR](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/operators/pureR) operator.
+Estimates R (the correlation coefficient) of an `Observable`. It will compute the current sample mean and sample standard deviation of the stream and then use those to estimate R.  This allows it to provide estimates quickly and in real-time.
 
 However, R values estimated early in the stream will typically be less correct than those estimated later (because the sample mean and variance will be estimated more correctly as more data points are ingested).  For most large and randomly sampled datasets, the R value will eventually converge to its true values as more items are ingested over time.
 
