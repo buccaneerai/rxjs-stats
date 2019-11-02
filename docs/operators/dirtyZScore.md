@@ -4,7 +4,7 @@
 
 {% hint style="warning" %}
 **Warning**: This method is called "dirty" because, by default, it will estimate z-score values using incremental estimates of the sample mean and standard deviation. This provides faster, streamable results but does not guarantee that the z-score value will be completely correct, especially for early values in the pipeline where it has not calculated a stable value for the mean and standard deviation.
-{% hint %}
+{% endhint %}
 
 Estimates z-score (the correlation coefficient) of an `Observable`. It will compute the current sample mean and sample standard deviation of the stream and then use those to estimate the z-score.  This allows it to provide estimates quickly and in real-time.
 
@@ -27,7 +27,7 @@ None
   * `stdevState`: a warm start value for the `stdev` operator. (See [stdev](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/operators/stdev).)
 
 ### Returns
-`Number`. (The current mean of the `Observable`.)
+`Number`. (The current zScore of the `Observable`.)
 
 ## Examples
 
@@ -36,15 +36,22 @@ None
 import { from } from 'rxjs';
 import { dirtyZScore } from '@buccaneer/rxjs-stats';
 
-const zScore$ = from([1, 2, 3, 4]).pipe(
+const zombiePirateHeight$ = [
+  600,
+  470,
+  170,
+  430,
+  300,
+];
+const zScore$ = from(zombiePirateHeight$).pipe(
   dirtyZScore()
 );
 
 zScore$.subscribe(console.log);
-// 1
-// 1.5
-// 2
-// 2.5
+// -0.7071
+// -1.1034
+// 0.0693
+// -0.5707
 ```
 
 
