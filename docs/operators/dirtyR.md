@@ -41,18 +41,18 @@ r$.subscribe(console.log);
 dirtyR([initialState={meanState: Object, stdevState: Object}])
 ```
 
-### Since
+#### Since
 1.2
 
-### Parameters
+#### Parameters
 None
 
-### Options
+#### Options
 * `initialState: Object {meanState: Object, stdevState: Object`: Sets a [warm start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warmstarts) value so that the R calculation can continue from a non-zero starting point (instead of a blank state).  Since R is calculated from the mean and standard deviation operators, the warm start values mirror those.  The object should include the following keys:
   * `xZScoreStates: Array`: an array of warm start values for each x value. Each value in the array should be a warm start object for the [dirtyZScore](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/operators/dirtyZScore) operator.
   * `yZScoreState: Object`: a warm start value for the `dirtyZScore` operator. (See [dirtyZScore](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/operators/dirtyZScore).)
 
-### Returns
+#### Returns
 `Number`. (The current R of the `Observable`.)
 
 

@@ -4,23 +4,6 @@
 
 Calculates the differences between each item in an `Observable` and the prior item.
 
-## API
-```
-change()
-```
-
-### Since
-0.5
-
-### Parameters
-None
-
-### Options
-None
-
-### Returns
-`Number`. (The latest difference from the `Observable`)
-
 ## Examples
 
 ```javascript
@@ -38,4 +21,21 @@ change$.subscribe(console.log);
 // 7
 // 10
 ```
+
+## API
+```
+change()
+```
+
+#### Since
+0.5
+
+#### Parameters
+None
+
+#### Options
+None
+
+#### Returns
+`Number`. (The latest difference from the `Observable`)
 
