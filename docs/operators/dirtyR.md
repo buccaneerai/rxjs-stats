@@ -10,6 +10,32 @@ Estimates R (the correlation coefficient) of an `Observable`. It will compute th
 
 However, R values estimated early in the stream will typically be less correct than those estimated later (because the sample mean and variance will be estimated more correctly as more data points are ingested).  For most large and randomly sampled datasets, the R value will eventually converge to its true values as more items are ingested over time.
 
+## Examples
+
+### Basic Example
+```javascript
+import { from } from 'rxjs';
+import { dirtyR } from '@buccaneer/rxjs-stats';
+
+const instance$ = from([
+  // [x, y], // where x is a variable/feature and y is the value to predict
+  [600, 75],
+  [470, 60],
+  [170, 15],
+  [430, 40],
+  [300, 30],
+]);
+const r$ = from(instance$).pipe(
+  dirtyR()
+);
+
+r$.subscribe(console.log);
+// 0.5
+// 0.8684,
+// 0.5723,
+// 0.5130
+```
+
 ## API
 ```
 dirtyR([initialState={meanState: Object, stdevState: Object}])
@@ -28,30 +54,5 @@ None
 
 ### Returns
 `Number`. (The current R of the `Observable`.)
-
-## Examples
-
-### Basic Example
-```javascript
-import { from } from 'rxjs';
-import { dirtyR } from '@buccaneer/rxjs-stats';
-
-const instance$ = from([
-  [600, 75],
-  [470, 60],
-  [170, 15],
-  [430, 40],
-  [300, 30],
-]);
-const r$ = from(instance$).pipe(
-  dirtyR()
-);
-
-r$.subscribe(console.log);
-// 0.5
-// 0.8684,
-// 0.5723,
-// 0.5130
-```
 
 
