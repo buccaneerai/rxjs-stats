@@ -46,19 +46,19 @@ accuracy$.subscribe(console.log);
 accuracy([initialState={truePositives: 0, falsePositives: 0, trueNegatives: 0, falseNegatives: 0}])
 ```
 
-#### Since
+**Since**
 0.5
 
-#### Parameters
+**Parameters**
 None
 
-#### Options
+**Options**
 * `initialState: Object {truePositives: Number, falsePositives: Number, trueNegatives: Number, falseNegatives: Number}`: Sets a [warm start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warmstarts) value so that the calculation can continue from a non-zero starting point (instead of a blank state).
   * `truePositives: Number` is a count of the true positives
   * `falsePositives: Number` is a count of the false positives
   * `trueNegatives: Number` is a count of the true negatives
   * `falseNegatives Number` is a count of the false negatives
 
-#### Returns
+**Returns**
 `Number`. (The current accuracy of the `Observable`.)
 

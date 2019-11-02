@@ -4,23 +4,6 @@
 
 Computes the mean \(arithmetic average\) of an `Observable`.
 
-## API
-```
-mean([initialState={average: 0, sum: 0, index: 0}])
-```
-
-### Since
-0.5
-
-### Parameters
-None
-
-### Options
-- `initialState: Object {average: Number, sum: Number, index: Number`: Sets a [warm start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warmstarts) value so that the mean calculation can continue from a non-zero starting point (instead of a blank state).
-
-### Returns
-`Number`. (The current mean of the `Observable`.)
-
 ## Examples
 
 ### Basic Example
@@ -38,6 +21,25 @@ mean$.subscribe(console.log);
 // 2
 // 2.5
 ```
+
+## API
+```
+mean([initialState={average: 0, sum: 0, index: 0}])
+```
+
+### Since
+0.5
+
+### Parameters
+None
+
+### Options
+- `initialState: Object {average: Number, sum: Number, index: Number`: Sets a [warm start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warmstarts) value so that the mean calculation can continue from a non-zero starting point (instead of a blank state).
+
+### Returns
+`Number`. (The current mean of the `Observable`.)
+
+## More Examples
 
 ### Skipping the first value
 It's odd to calculate the mean of just one item. Sometimes, it makes more sense to skip the first item to ensure that means are calculated based on more than one number. RxJS makes this easy:

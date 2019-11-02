@@ -4,25 +4,6 @@
 
 Given an `Observable` of ground-truth labels and predictions, the recall operator returns the [recall](https://en.wikipedia.org/wiki/Precision_and_recall).
 
-## API
-```
-recall([initialState={truePositives: 0, falseNegatives: 0}])
-```
-
-### Since
-0.5
-
-### Parameters
-None
-
-### Options
-* `initialState: Object {truePositives: Number, falseNegatives: Number}`: Sets a [warm start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warmstarts) value so that the calculation can continue from a non-zero starting point (instead of a blank state). The initialState should have these keys:
-  * `truePositives: Number` is a count of the true positives
-  * `falseNegatives: Number` is a count of the false negatives
-
-### Returns
-`Number`. (The current recall of the `Observable`.)
-
 ## Examples
 
 ```javascript
@@ -60,3 +41,21 @@ recall$.subscribe(console.log);
 // 0.5714285714
 ```
 
+## API
+```
+recall([initialState={truePositives: 0, falseNegatives: 0}])
+```
+
+### Since
+0.5
+
+### Parameters
+None
+
+### Options
+* `initialState: Object {truePositives: Number, falseNegatives: Number}`: Sets a [warm start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warmstarts) value so that the calculation can continue from a non-zero starting point (instead of a blank state). The initialState should have these keys:
+  * `truePositives: Number` is a count of the true positives
+  * `falseNegatives: Number` is a count of the false negatives
+
+### Returns
+`Number`. (The current recall of the `Observable`.)

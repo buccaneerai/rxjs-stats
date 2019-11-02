@@ -4,23 +4,6 @@
 
 Calculates the sum of all items in an `Observable`.
 
-## API
-```
-sum([initialState={total: 0}])
-```
-
-### Since
-0.5
-
-### Parameters
-None
-
-### Options
-- `initialState: Object {total: Number}`: Sets a [warm start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warmstarts) value so that the calculation can continue from a non-zero starting point (instead of a blank state).
-
-### Returns
-`Number`. (The current sum of the `Observable`.)
-
 ## Examples
 
 ```javascript
@@ -39,4 +22,21 @@ num$.subscribe(console.log);
 // 10
 // 15
 ```
+
+## API
+```
+sum([initialState={total: 0}])
+```
+
+### Since
+0.5
+
+### Parameters
+None
+
+### Options
+- `initialState: Object {total: Number}`: Sets a [warm start](https://app.gitbook.com/@brianbuccaneer/s/rxjs-stats/guides/warmstarts) value so that the calculation can continue from a non-zero starting point (instead of a blank state).
+
+### Returns
+`Number`. (The current sum of the `Observable`.)
 
