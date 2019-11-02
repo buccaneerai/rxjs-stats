@@ -4,6 +4,22 @@
 
 Rounds numbers in an `Observable` to the number of desired decimal places.
 
+## Examples
+
+```javascript
+import { from } from 'rxjs';
+import { roundTo } from '@buccaneer/rxjs-stats';
+
+const num$ = from([1.234567, 4.5678]);
+const roundedNum$ = num$.pipe(
+  roundTo(3)
+);
+roundedNum$.subscribe(console.log);
+// Output:
+// 1.235
+// 4.568
+```
+
 ## API
 ```
 sum(numDecimalPlaces: Number)
@@ -20,20 +36,4 @@ None
 
 ### Returns
 `Number`. (Numbers from `Observable`, rounded to the correct number of decimal places.)
-
-## Examples
-
-```javascript
-import { from } from 'rxjs';
-import { roundTo } from '@buccaneer/rxjs-stats';
-
-const num$ = from([1.234567, 4.5678]);
-const roundedNum$ = num$.pipe(
-  roundTo(3)
-);
-roundedNum$.subscribe(console.log);
-// Output:
-// 1.235
-// 4.568
-```
 

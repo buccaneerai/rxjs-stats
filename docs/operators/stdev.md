@@ -6,6 +6,24 @@ Computes the sample standard deviation of an `Observable` using [Welford's Onlin
 
 By default, it will compute the sample (rather than population) standard deviation.
 
+## Examples
+
+```javascript
+import { from } from 'rxjs';
+import { takeLast } from 'rxjs';
+import { stdev, roundTo } from '@buccaneer/rxjs-stats';
+
+const stdev$ = from([600, 470, 170, 430, 300]).pipe(
+  stdev(),
+  takeLast(1),
+  roundTo(6)
+);
+
+stdev$.subscribe(console.log);
+// Output:
+// 164.71187
+```
+
 ## API
 ```
 stdev(
@@ -30,29 +48,9 @@ None
 ### Returns
 `Number`. (The current variance of the `Observable`.)
 
-#### Arguments
-
+### Arguments
 None
 
 ### Options
-
 None
-
-## Examples
-
-```javascript
-import { from } from 'rxjs';
-import { takeLast } from 'rxjs';
-import { stdev, roundTo } from '@buccaneer/rxjs-stats';
-
-const stdev$ = from([600, 470, 170, 430, 300]).pipe(
-  stdev(),
-  takeLast(1),
-  roundTo(6)
-);
-
-stdev$.subscribe(console.log);
-// Output:
-// 164.71187
-```
 
