@@ -57,7 +57,7 @@
     "sinon": "^7.5.0"
   },
   "scripts": {
-    "build": "rm -rf ./build/* && babel ./src -d ./build --ignore *.test.js",
+    "build": "rm -rf ./build/* && babel ./src -d ./build --ignore src/*.test.js,src/**/*.test.js",
     "lint": "eslint -c .eslintrc ./src",
     "test": "mocha --require @babel/register --require @babel/polyfill ./src/*.test.js ./src/**/*.test.js --exit --require source-map-support"
   }
