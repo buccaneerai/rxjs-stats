@@ -10,7 +10,6 @@ import roundTo from './roundTo';
 // https://www.statisticshowto.datasciencecentral.com/probability-and-statistics/variance/
 describe('variance', () => {
   it('should compute sample variance correctly to 6 decimal places when given a stream of numbers', marbles(m => {
-    const trueSampleVariance = 27130;
     const dogSizes = {
       0: 600,
       1: 470,
@@ -22,10 +21,12 @@ describe('variance', () => {
     const actual$ = num$.pipe(
       variance(),
       roundTo(6),
-      skip(2)
     );
-    const expected$ = m.cold('---------v|', {
-      v: trueSampleVariance
+    const expected$ = m.cold('-1-(23)--4|', {
+      1: 8450,
+      2: 48633.333333,
+      3: 32491.666667,
+      4: 27130,
     });
     m.expect(actual$).toBeObservable(expected$);
   }));
@@ -43,7 +44,7 @@ describe('variance', () => {
     const actual$ = num$.pipe(
       variance(null, false),
       roundTo(6),
-      skip(2)
+      skip(3)
     );
     const expected$ = m.cold('---------v|', {v: 21704});
     m.expect(actual$).toBeObservable(expected$);

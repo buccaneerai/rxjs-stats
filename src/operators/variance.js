@@ -30,11 +30,11 @@ const variance = function variance(
       ? m2 / (index - 1)
       : m2 / index
     )),
-    skip( // variance requires at least 2 numbers
-      initialState && initialState.index > 1
-      ? 0
-      : 1
-    )
+    // skip( // variance requires at least 2 numbers
+    //   initialState && initialState.index > 1
+    //   ? 0
+    //   : 1
+    // )
   );
 };
 

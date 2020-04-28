@@ -11,6 +11,8 @@
   * [accuracy](operators/accuracy.md)
   * [change](operators/change.md)
   * [countValues](operators/countValues.md)
+  * [dirtyR](operators/dirtyR.md)
+  * [dirtyZScore](operators/dirtyZScore.md)
   * [f1](operators/f1.md)
   * [mean](operators/mean.md)
   * [precision](operators/precision.md)

@@ -7,6 +7,9 @@ describe('operators', () => {
       const api = [
         'accuracy',
         'change',
+        'countValues',
+        'dirtyR',
+        'dirtyZScore',
         'f1',
         'mean',
         'precision',
